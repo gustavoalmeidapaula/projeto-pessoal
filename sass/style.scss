@@ -1,0 +1,192 @@
+$font-family: 'Ubuntu', sans-serif;
+$spacing-unit: 10px;
+
+// Colors
+$primary-color: #341f0a;
+$secundary-color: #FFDFC0;
+$font-color: #ffffff;
+$brasil-color: #93510D ;
+
+$light-bg: #FFDFC0;
+$light-text: #341f0a;
+$dark-bg: #341f0a;
+$dark-text: #ffffff;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+}
+
+body {
+    font-family: $font-family;
+    background-color: $light-bg;
+}
+
+@mixin button-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $font-color;
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    background-color: $brasil-color;
+    border: none;
+    border-radius: .25rem;
+    font-weight: 700;
+    padding: .6rem 2rem;
+    transition: .15s;
+    cursor:pointer;
+
+
+}
+
+nav {
+    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 30px;
+
+    .menu-principal {
+        list-style: none;
+        display: flex;
+
+        li {
+            margin-right: 20px;
+            position: relative;
+
+            .submenu {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-size: 15px;
+                position: absolute;
+                display: none;
+                border-radius: 15px;
+                background-color: $primary-color;
+                z-index: 1;
+
+                li {
+                    padding: 8px 12px;
+                }
+
+                a {
+                    color: $font-color;
+                    display: block;
+                }
+            }
+
+            &:hover .submenu {
+                display: block;
+                opacity: 20;
+                transition: opacity 1s ease-in-out;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $font-color;
+        font-weight: bold;
+        padding: 8px 12px;
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    button {
+        @include button-style;
+    }
+
+    :hover button {
+        background-color: $dark-bg;
+        color: $font-color;
+       transform: scale(1.1s);
+        border: $brasil-color double 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .barra-inicial {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .menu-principal {
+            flex-direction: column;
+            width: 100%;
+            display: none;
+
+            &.show {
+                display: flex;
+            }
+
+            li {
+                width: 100%;
+
+                .submenu {
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                }
+            }
+        }
+
+        button {
+            margin-top: 1rem;
+            padding: .6rem 2rem;
+        }
+    }
+
+    #bem-vindo {
+        padding: 1rem;
+    }
+}
+
+.brasil {
+    margin-left: 50px;
+    padding: 5px;
+    width: 130px;
+    display: flex;
+}
+
+#pag-const {
+    color: grey;
+    display: flex;
+    margin-top: 150px;
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+#bem-vindo {
+    background-color: $primary-color;
+    color: $font-color;
+    margin-top: 150px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo-proj {
+    margin-top: 5px;
+    width: 480px;
+    margin-bottom: 5px;
+
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

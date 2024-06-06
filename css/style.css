@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #FFDFC0;
+}
+
+nav {
+  background-color: #341f0a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 30px;
+}
+nav .menu-principal {
+  list-style: none;
+  display: flex;
+}
+nav .menu-principal li {
+  margin-right: 20px;
+  position: relative;
+}
+nav .menu-principal li .submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  position: absolute;
+  display: none;
+  border-radius: 15px;
+  background-color: #341f0a;
+  z-index: 1;
+}
+nav .menu-principal li .submenu li {
+  padding: 8px 12px;
+}
+nav .menu-principal li .submenu a {
+  color: #ffffff;
+  display: block;
+}
+nav .menu-principal li:hover .submenu {
+  display: block;
+  opacity: 20;
+  transition: opacity 1s ease-in-out;
+}
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  display: block;
+}
+nav button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+  background-color: #93510D;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  padding: 0.6rem 2rem;
+  transition: 0.15s;
+  cursor: pointer;
+}
+nav :hover button {
+  background-color: #341f0a;
+  color: #ffffff;
+  transform: scale(1.1s);
+  border: #93510D double 5px;
+}
+
+@media (max-width: 768px) {
+  .barra-inicial {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .barra-inicial .menu-principal {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+  .barra-inicial .menu-principal.show {
+    display: flex;
+  }
+  .barra-inicial .menu-principal li {
+    width: 100%;
+  }
+  .barra-inicial .menu-principal li .submenu {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .barra-inicial button {
+    margin-top: 1rem;
+    padding: 0.6rem 2rem;
+  }
+  #bem-vindo {
+    padding: 1rem;
+  }
+}
+.brasil {
+  margin-left: 50px;
+  padding: 5px;
+  width: 130px;
+  display: flex;
+}
+
+#pag-const {
+  color: grey;
+  display: flex;
+  margin-top: 150px;
+  font-size: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+#bem-vindo {
+  background-color: #341f0a;
+  color: #ffffff;
+  margin-top: 150px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo-proj {
+  margin-top: 5px;
+  width: 480px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
